@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>:active and :focus</title>
+		<style >
+			.container,
+      .btns{
+				width: 408px;
+				height: 102px;
+				line-height: 102px;
+				margin: 50px auto;
+				display: flex;
+				text-align: center;
+			}
+      
+			.small,
+      button{
+				flex: 1;
+				cursor: pointer;
+			}
+      
+			/*div:active和:focus*/
+			.small:first-child:active,
+			.small:nth-child(2):focus,
+			.small:last-child:focus {
+				background-color: blueviolet;
+				color: white;
+			}
+      
+			/*button:active和:focus*/
+			#btn1:active,
+			#btn2:focus,
+			#btn3:focus {
+				background-color: red;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h4>
+			:focus 元素获取焦点时触发.但div不支持,需要"tabindex"使其支持<br>
+			试试在页面上按tab键,会自动选中支持和设置了tabindex的元素<br>
+			tabindex="number",number为选中顺序,可以重复,默认为0.详情见:<br>
+			<a href="https://www.w3school.com.cn/tags/att_standard_tabindex.asp">
+				https://www.w3school.com.cn/tags/att_standard_tabindex.asp
+			</a>
+		</h4>
+		<div class="container">
+			<div class="small" style="border: 1px solid red;">div1:active</div>
+			<div class="small" tabindex="2" style="border: 1px solid blueviolet;">div2:focus</div>
+			<div class="small" tabindex="1" style="border: 1px solid black;">div3:focus</div>
+		</div>
+		<div class="btns">
+			<button type="button" id="btn1">按钮1</button>
+			<button type="button" id="btn2">按钮2</button>
+			<button type="button" id="btn3">按钮3</button>
+		</div>
+	</body>
+</html>
