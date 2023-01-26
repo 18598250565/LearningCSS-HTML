@@ -3,9 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>:active and :focus</title>
-		<style >
-			.container,
-      .btns{
+		<style>
+			.container,.btns{
 				width: 408px;
 				height: 102px;
 				line-height: 102px;
@@ -14,8 +13,7 @@
 				text-align: center;
 			}
       
-			.small,
-      button{
+			.small,button{
 				flex: 1;
 				cursor: pointer;
 			}
